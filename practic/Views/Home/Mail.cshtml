@@ -1,0 +1,21 @@
+﻿@using practic.Data.Models
+@model Realtor
+
+<h3>Оформление анкеты</h3>
+<div class="row mb-5">
+    <form asp-action="Checkout" method="post" , claass="form-horizontal">
+        <div class="form-group">
+            <b>ФИО</b>
+            <input type="text" name="name" id="name" />
+        </div>
+        <div class="form-group">
+            <b>Информация о вас</b>
+            <input type="text" name="longDesc" id="longDesc" />
+        </div>
+        <div class="form-group">
+            <b>Ваша почта</b>
+            <input type="text" name="email" id="email" />
+        </div>
+        <input class="btn btn-success" type="submit" value="Завершить заказ" asp-controller="Home" asp-action="SendEmail" />
+     </form>
+</div>

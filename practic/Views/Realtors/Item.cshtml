@@ -1,0 +1,15 @@
+﻿@using practic.Data.Models
+@model RealtorItemViewModel
+
+<div class="col-lg-4">
+    @{
+        foreach(Realtor r in Model.realtor)
+        {
+            <img class="img-thumbnail" src="@r.img" alt="@r.name" />
+            <p>@r.shortDesc</p>
+            <p>Цена: @r.price.ToString("c")</p>
+            <p>Описание: @r.longDesc</p>
+        }
+    }
+    
+</div>

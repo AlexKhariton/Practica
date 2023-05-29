@@ -1,0 +1,12 @@
+﻿@using practic.Data.Models
+@model HomeViewModel
+
+<h1>ВСЕ ПРЕДЛОЖЕНИЯ</h1>
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Realtor rieltor in Model.realtors)
+        {
+            @Html.Partial("AllRealtors", rieltor)
+        }
+    }
+</div>

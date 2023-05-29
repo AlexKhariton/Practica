@@ -1,0 +1,10 @@
+﻿@using practic.Data.Models
+@model Realtor
+
+<div class="col-lg-4">
+    <img class="img-thumbnail" src="@Model.img" alt="@Model.name" />
+    <h2>@Model.name</h2>
+    <p>@Model.shortDesc</p>
+    <p>Цена: @Model.price.ToString("c")</p>
+    <input class="btn btn-success" type="submit" value="Подробнее" asp-controller="Realtors" asp-action="Item" />
+</div>
